@@ -11,7 +11,9 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+
     'components' => [
+
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],
@@ -44,6 +46,21 @@ return [
             ],
         ],
         */
+        'authClientCollection' => [
+            'class' => 'yii\authclient\Collection',
+            'clients' => [
+                'facebook' => [
+                    'class' => 'yii\authclient\clients\Facebook',
+                    'clientId' => '345964569656353',
+                    'clientSecret' => '65911e4a1f61e94b3cf94d216d26c3ed',
+                ],
+            ],
+        ]
+
+
     ],
     'params' => $params,
+
+
+
 ];
